@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Theming ownCloud &mdash; ownCloud 8.0 Server Administration Manual 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/main.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="ownCloud 8.0 Server Administration Manual 8.0 documentation" href="../contents.html" />
+    <link rel="up" title="Operations" href="index.html" />
+    <link rel="next" title="Issues and Troubleshooting" href="../issues/index.html" />
+    <link rel="prev" title="Scaling Across Multiple Machines" href="scaling_multiple_machines.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1d2d44">
+
+  </head>
+  <body role="document">
+
+
+<div class="wrap container not-front">
+  <div class="content row">
+  <main class="main">
+    <div class="row page-content-header">
+      <div class="col-md-5 col-md-offset-7">
+      
+        <form class="headersearch" style="margin-bottom:-3px;" action="../search.html" method="get">
+        <input type="text" value="" name="q" id="q" class="form-control" /> 
+        <button  class="btn btn-default" type="submit" id="searchsubmit">Search</button>
+        </form>
+      
+      </div>
+    </div>
+    
+			<div class="row">
+				<div class="col-md-3">
+					<div class="sidebar">
+							<div class="menu-support-container">
+								<ul id="menu-support" class="menu">
+									<ul>
+										
+<li><a href="../contents.html">Table of Contents</a></li>
+									</ul>
+                  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">ownCloud 8.0 Server Administration Manual Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes.html">ownCloud 8.0 Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new_admin.html">What&#8217;s New for Admins in ownCloud 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration_user/index.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration_files/index.html">File Sharing and Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration_server/index.html">ownCloud Server Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration_database/index.html">Database Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintenance/index.html">Maintenance</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Operations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="considerations_on_monitoring.html">Considerations on Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scaling_multiple_machines.html">Scaling Across Multiple Machines</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Theming ownCloud</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#customize-the-logo">Customize the logo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-colors">Changing Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#theming-emails">Theming emails</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#theming-example">Theming Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#establishing-a-directory-structure">Establishing a Directory Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-file">Configuration File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#splash-screen-logo">Splash Screen Logo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#top-left-logo">Top Left Logo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modifying-colors">Modifying Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-application-icons">Changing Application icons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#results">Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../issues/index.html">Issues and Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../videos/index.html">ownCloud Videos</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_installation/index.html">Enterprise Edition Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_clients/index.html">Creating Branded ownCloud Clients (Enterprise only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_server_branding/index.html">Enterprise Server Branding (Enterprise only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_external_storage/index.html">External Storage (Enterprise only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_user_management/index.html">User Management (Enterprise only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_files_drop/index.html">Enabling Anonymous Uploads with Files Drop (Enterprise Only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_logging/index.html">Enterprise Logging Apps (Enterprise only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_troubleshooting.html">Enterprise Troubleshooting</a></li>
+</ul>
+
+								</ul>
+							</div>
+					</div>
+				</div>
+        
+
+				<div class="col-md-9">
+					<div class="page-content">
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="scaling_multiple_machines.html" title="Previous Chapter: Scaling Across Multiple Machines"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Scaling Acros...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="../issues/index.html" title="Next Chapter: Issues and Troubleshooting"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Issues and Tr... &raquo;</span>
+    </a>
+  </li>
+</ul>
+						
+  <div class="section" id="theming-owncloud">
+<h1>Theming ownCloud<a class="headerlink" href="#theming-owncloud" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>ownCloud supports themes, so you can customize its look without editing source code. This
+document covers the basic steps of theming, and then walks through a basic
+theming example.</p>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>The themes directory (usually <code class="docutils literal"><span class="pre">owncloud/themes</span></code>) contains all theming
+files. A default ownCloud installation comes with a helpful README in this directory. To
+add a new theme, copy a directory containing your themes files in this directory. The
+directory name is the theme name, and you configure ownCloud to use this theme by linking
+it in <code class="docutils literal"><span class="pre">config.php</span></code> with the <code class="docutils literal"><span class="pre">theme</span></code> directive:</p>
+<div class="highlight-python"><div class="highlight"><pre>&#39;theme&#39; =&gt; &#39;themename&#39;,
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When you upgrade ownCloud custom themes are disabled, as custom
+themes can sometimes break the upgrade routine. You must re-enable your
+custom theme after the upgrade is complete by re-entering your theme name in
+config.php.</p>
+</div>
+<p>This theme overrides any Javascript files, images, templates and CSS files in other
+locations. Your directory structure should be the same as in <code class="docutils literal"><span class="pre">owncloud/core/</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>themename/
+  core/
+   css
+   img
+   js
+</pre></div>
+</div>
+<p>Never edit the core template files&#8211; always use <code class="docutils literal"><span class="pre">owncloud/themes</span></code> for customizations.
+Errors in theme files can break ownCloud, so you can always revert to the default theme
+while you fix your custom theme.</p>
+<p>It is possible for a theme to break between major ownCloud releases, as there may be
+changes to the ownCloud file structure. This can easily be resolved by examining the path
+to the file being replaced and mirror that path within the themes directory structure.</p>
+</div>
+<div class="section" id="customize-the-logo">
+<h2>Customize the logo<a class="headerlink" href="#customize-the-logo" title="Permalink to this headline">¶</a></h2>
+<p>Customized logos go in the <code class="docutils literal"><span class="pre">themes/core/img</span></code> directory. You can adapt the following example code, which goes in <code class="docutils literal"><span class="pre">themes/themename/core/css/header.css</span></code>, to display your customized logos:</p>
+<div class="highlight-python"><div class="highlight"><pre>#header .logo {
+   background-image: url(../img/logo.svg);
+   background-repeat: no-repeat;
+   width: 252px;
+   height: 120px;
+   margin: 0 auto;
+}
+
+#header .logo-wide {
+   background-image: url(../img/logo-wide.svg);
+   background-repeat: no-repeat;
+   width: 150px;
+   height: 34px;
+}
+
+#header .logo-icon {
+   /* display logo so appname can be shown next to it */
+   display: inline-block;
+   background-image: url(../img/logo-icon.svg);
+   background-repeat: no-repeat;
+   width: 62px;
+   height: 34px;
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="changing-colors">
+<h2>Changing Colors<a class="headerlink" href="#changing-colors" title="Permalink to this headline">¶</a></h2>
+<p>The color scheme is stored in the <code class="docutils literal"><span class="pre">styles.css</span></code> file within the
+<code class="docutils literal"><span class="pre">owncloud/core/css</span></code> folder.</p>
+<p>To change the color of the header bars, copy the <code class="docutils literal"><span class="pre">core/css/styles.css</span></code>
+to <code class="docutils literal"><span class="pre">themes/&lt;themename&gt;/core/css/styles.css</span></code> and edit.</p>
+<p>This example shows a section in <code class="docutils literal"><span class="pre">styles.css</span></code> that configures colors. There are several
+locations within this file that assign colors to various page elements.</p>
+<div class="highlight-python"><div class="highlight"><pre>#body-login {
+        text-align: center;
+        background: #1d2d44; /* Old browsers */
+        background: url(&#39;../img/noise.png&#39;), -moz-linear-gradient(top, #35537a 0%, #1d2d44 100%); /* FF3.6+ */
+        background: url(&#39;../img/noise.png&#39;), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#35537a), color-stop(100%,#1d2d44)); /* Chrome,Safari4+ */
+        background: url(&#39;../img/noise.png&#39;), -webkit-linear-gradient(top, #35537a 0%,#1d2d44 100%); /* Chrome10+,Safari5.1+ */
+        background: url(&#39;../img/noise.png&#39;), -o-linear-gradient(top, #35537a 0%,#1d2d44 100%); /* Opera11.10+ */
+        background: url(&#39;../img/noise.png&#39;), -ms-linear-gradient(top, #35537a 0%,#1d2d44 100%); /* IE10+ */
+        background: url(&#39;../img/noise.png&#39;), linear-gradient(top, #35537a 0%,#1d2d44 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#35537a&#39;, endColorstr=&#39;#1d2d44&#39;,GradientType=0 ); /* IE6-9 */
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="theming-emails">
+<h2>Theming emails<a class="headerlink" href="#theming-emails" title="Permalink to this headline">¶</a></h2>
+<p>Your ownCloud server can send notification and password reset emails, like this
+notification of a new file share:</p>
+<a class="reference internal image-reference" href="../_images/theming-1.png"><img alt="../_images/theming-1.png" src="../_images/theming-1.png" style="width: 6.0201in; height: 2.2654in;" /></a>
+<p>Email templates are stored in <code class="docutils literal"><span class="pre">owncloud/core/templates/</span></code>
+and may be modified by copying them to <code class="docutils literal"><span class="pre">owncloud/themes/core/templates/mail.php</span></code>, and
+then customizing the copies. You may also edit email templates in the graphical template
+editor on your ownCloud Admin page.</p>
+</div>
+<div class="section" id="theming-example">
+<h2>Theming Example<a class="headerlink" href="#theming-example" title="Permalink to this headline">¶</a></h2>
+<p>General Hospital wants their own custom ownCloud theme, with custom logos and colors.
+Here is a step by step guide of how to build this theme.</p>
+</div>
+<div class="section" id="establishing-a-directory-structure">
+<h2>Establishing a Directory Structure<a class="headerlink" href="#establishing-a-directory-structure" title="Permalink to this headline">¶</a></h2>
+<p>Avoid spaces in your custom theme names:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">themes</span><span class="o">/</span><span class="n">GeneralHospital</span>
+</pre></div>
+</div>
+<p>Next, create the directories for images and style sheets:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">themes</span><span class="o">/</span><span class="n">GeneralHospital</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">img</span>
+<span class="n">themes</span><span class="o">/</span><span class="n">GeneralHospital</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">css</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuration-file">
+<h2>Configuration File<a class="headerlink" href="#configuration-file" title="Permalink to this headline">¶</a></h2>
+<p>Next, add your new theme name to <code class="docutils literal"><span class="pre">config.php</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>‘theme’ =&gt; ‘GeneralHospital’,
+</pre></div>
+</div>
+</div>
+<div class="section" id="splash-screen-logo">
+<h2>Splash Screen Logo<a class="headerlink" href="#splash-screen-logo" title="Permalink to this headline">¶</a></h2>
+<p>This is the new logo for the login splash screen. It must be a 252x122 pixel SVG
+file:</p>
+<img alt="../_images/theming-2.png" src="../_images/theming-2.png" />
+<p>The file must be named logo.svg and placed in the image folder:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">themes</span><span class="o">/</span><span class="n">GeneralHospital</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">img</span><span class="o">/</span><span class="n">logo</span><span class="o">.</span><span class="n">svg</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="top-left-logo">
+<h2>Top Left Logo<a class="headerlink" href="#top-left-logo" title="Permalink to this headline">¶</a></h2>
+<p>This is the new custom logo for the top left of the ownCloud navigation frame:</p>
+<img alt="../_images/theming-3.png" src="../_images/theming-3.png" />
+<p>It must be an SVG file at 142x32 pixels, named <code class="docutils literal"><span class="pre">logo-wide.svg</span></code>. You can alter the
+width, but the height is fixed. This file also goes in the
+<code class="docutils literal"><span class="pre">themes/GeneralHospital/core/img/</span></code> folder.</p>
+</div>
+<div class="section" id="modifying-colors">
+<h2>Modifying Colors<a class="headerlink" href="#modifying-colors" title="Permalink to this headline">¶</a></h2>
+<p>The color definitions are stored in <code class="docutils literal"><span class="pre">core/css/styles.css</span></code>.
+The first step is to copy this file to <code class="docutils literal"><span class="pre">themes/GeneralHospital/core/css/styles.css</span></code>.</p>
+<p>As stated in section Changing colors, edit the colors as desired in this section:</p>
+<div class="highlight-python"><div class="highlight"><pre>#body-login {
+        text-align: center;
+        background: #1d2d44; /* Old browsers */
+        background: url(&#39;../img/noise.png&#39;), -moz-linear-gradient(top, #35537a 0%, #1d2d44 100%); /* FF3.6+ */
+        background: url(&#39;../img/noise.png&#39;), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#35537a), color-stop(100%,#1d2d44)); /* Chrome,Safari4+ */
+        background: url(&#39;../img/noise.png&#39;), -webkit-linear-gradient(top, #35537a 0%,#1d2d44 100%); /* Chrome10+,Safari5.1+ */
+        background: url(&#39;../img/noise.png&#39;), -o-linear-gradient(top, #35537a 0%,#1d2d44 100%); /* Opera11.10+ */
+        background: url(&#39;../img/noise.png&#39;), -ms-linear-gradient(top, #35537a 0%,#1d2d44 100%); /* IE10+ */
+        background: url(&#39;../img/noise.png&#39;), linear-gradient(top, #35537a 0%,#1d2d44 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#35537a&#39;, endColorstr=&#39;#1d2d44&#39;,GradientType=0 ); /* IE6-9 */
+}
+</pre></div>
+</div>
+<p>This section of code handles the headers for many different browser types.
+The default colors in the above example are <code class="docutils literal"><span class="pre">#33537a</span></code> (light blue) and
+<code class="docutils literal"><span class="pre">#1d2d42</span></code> (dark blue).  Some older browsers have only one color, however,
+most support gradients.</p>
+<p>The login page background is a horizontal gradient. The hex <code class="docutils literal"><span class="pre">#33537a</span></code>
+is the top color of the gradient at the login screen.  The <code class="docutils literal"><span class="pre">#1d2d42</span></code>
+is the bottom color of the gradient at the login screen.</p>
+<p>To change the colors, modify these entries with the desired <a class="reference external" href="http://cloford.com/resources/colours/500col.htm">hex color code</a>.</p>
+</div>
+<div class="section" id="changing-application-icons">
+<h2>Changing Application icons<a class="headerlink" href="#changing-application-icons" title="Permalink to this headline">¶</a></h2>
+<p>App icons can be modified as well. App icons are in the <code class="docutils literal"><span class="pre">owncloud/apps/&lt;app&gt;/img</span></code>
+folder. Similarly, the modified icon should reside in the
+<code class="docutils literal"><span class="pre">owncloud/themes/&lt;themename&gt;/apps/&lt;app&gt;/img</span></code> folder.</p>
+<p>General Hospital would like to modify the activity icon with the following image:</p>
+<img alt="../_images/theming-4.jpg" src="../_images/theming-4.jpg" />
+<p>And the Documents icon with the following:</p>
+<img alt="../_images/theming-5.png" src="../_images/theming-5.png" />
+<p>These must be converted to SVG format and placed in these locations:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">owncloud</span><span class="o">/</span><span class="n">themes</span><span class="o">/</span><span class="n">GeneralHospital</span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">activity</span><span class="o">/</span><span class="n">img</span><span class="o">/</span><span class="n">activity</span><span class="o">.</span><span class="n">svg</span>
+<span class="n">owncloud</span><span class="o">/</span><span class="n">themes</span><span class="o">/</span><span class="n">GeneralHospital</span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">documents</span><span class="o">/</span><span class="n">img</span><span class="o">/</span><span class="n">documents</span><span class="o">.</span><span class="n">svg</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p>After saving all files and refreshing the Web browser, you can see the new theme:</p>
+<a class="reference internal image-reference" href="../_images/theming-6.png"><img alt="../_images/theming-6.png" src="../_images/theming-6.png" style="width: 6.5in; height: 4.1681in;" /></a>
+<a class="reference internal image-reference" href="../_images/theming-7.png"><img alt="../_images/theming-7.png" src="../_images/theming-7.png" style="width: 6.5in; height: 2.1701in;" /></a>
+<div class="section" id="theming-the-first-run-wizard">
+<h3>Theming the First Run Wizard<a class="headerlink" href="#theming-the-first-run-wizard" title="Permalink to this headline">¶</a></h3>
+<p>The ownCloud First Run Wizard is a welcome screen which appears when a user
+logs into your ownCloud server for the first time, and users can re-run anytime from
+their Personal pages.
+(See <cite>:doc: ../installation/installation-wizard</cite>)</p>
+<p>You may customize the welcome screen. This is the default:</p>
+<a class="reference internal image-reference" href="../_images/theming-8.png"><img alt="../_images/theming-8.png" src="../_images/theming-8.png" style="width: 6.5in; height: 3.5398in;" /></a>
+<p>The base file containing the welcome window configuration is
+<code class="docutils literal"><span class="pre">apps/firstwunwizard/templates/wizard.php</span></code>.  Copy this file to your custom
+themes directory. (Make sure the <code class="docutils literal"><span class="pre">config.php</span></code> file has been updated to
+point to your themes directory.)</p>
+<p>The <code class="docutils literal"><span class="pre">wizard.php</span></code> file performs checks to verify whether the community or
+enterprise edition of ownCloud is running.  The welcome screen is slightly
+different in the two instances.</p>
+<p>As an enterprise customer, all modifications to the <code class="docutils literal"><span class="pre">wizard.php</span></code> file should be in the
+&#8220;Else&#8221; section of the following condition statements:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;?php if (OC_Util::getEditEditionString() === &#39;&#39;): ?&gt;
+  ...
+&lt;?php else: ?&gt;
+  ...
+&lt;?php endif; ?&gt;
+</pre></div>
+</div>
+<p>General Hospital wants to modify the welcome window, so modify <code class="docutils literal"><span class="pre">wizard.php</span></code> to apply the appropriate customizations. In this example several instances of <code class="docutils literal"><span class="pre">ownCloud</span></code> are replaced with <code class="docutils literal"><span class="pre">General</span> <span class="pre">Hospital</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;div id=&quot;firstrunwizard&quot;&gt;
+
+&lt;a id=&quot;closeWizard&quot; class=&quot;close&quot;&gt;
+       &lt;img class=&quot;svg&quot; src=&quot;&lt;?php print_unescaped(OCP\Util::imagePath(&#39;core&#39;, &#39;actions/close.svg&#39;)); ?&gt;&quot;&gt;
+&lt;/a&gt;
+&lt;h1&gt;&lt;?php p($l-&gt;t(&#39;Welcome to the General Hospital Cloud&#39;, array($theme-&gt;getTitle()))); ?&gt;&lt;/h1&gt;
+&lt;?php if (OC_Util::getEditionString() === &#39;&#39;): ?&gt;
+&lt;p&gt;&lt;?php p($l-&gt;t(&#39;Your personal web services. All your files, contacts, calendar and more, in one place.&#39;));?&gt;&lt;/p&gt;
+&lt;?php else: ?&gt;
+&lt;h2&gt;&lt;?php p($1-&gt;t(&#39;Enjoy your stay&#39;));?&gt;&lt;/h2&gt;
+&lt;?php endif; ?&gt;
+
+
+&lt;h2&gt;&lt;?php p($l-&gt;t(&#39;Get the apps to sync your files&#39;));?&gt;&lt;/h2&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;&lt;?php p($_[&#39;clients&#39;][&#39;desktop&#39;]); ?&gt;&quot;&gt;
+       &lt;img src=&quot;&lt;?php print_unescaped(OCP\Util::imagePath(&#39;core&#39;, &#39;desktopapp.png&#39;)); ?&gt;&quot; /&gt;
+&lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;&lt;?php p($_[&#39;clients&#39;][&#39;android&#39;]); ?&gt;&quot;&gt;
+       &lt;img src=&quot;&lt;?php print_unescaped(OCP\Util::imagePath(&#39;core&#39;, &#39;googleplay.png&#39;)); ?&gt;&quot; /&gt;
+&lt;/a&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;&lt;?php p($_[&#39;clients&#39;][&#39;ios&#39;]); ?&gt;&quot;&gt;
+       &lt;img src=&quot;&lt;?php print_unescaped(OCP\Util::imagePath(&#39;core&#39;, &#39;appstore.png&#39;)); ?&gt;&quot; /&gt;
+&lt;/a&gt;
+
+&lt;?php if (OC_Util::getEditionString() === &#39;&#39;): ?&gt;
+&lt;h2&gt;&lt;?php p($l-&gt;t(&#39;Connect your desktop apps to %s&#39;, array($theme-&gt;getName()))); ?&gt;&lt;/h2&gt;
+&lt;a target=&quot;_blank&quot; class=&quot;button&quot; href=&quot;&lt;?php p(link_to_docs(&#39;user-sync-calendars&#39;)) ?&gt;&quot;&gt;
+       &lt;img class=&quot;appsmall appsmall-calendar svg&quot; src=&quot;&lt;?php print_unescaped(OCP\Util::imagePath(&#39;core&#39;, &#39;places/calendar-dark.svg&#39;)); ?&gt;&quot; /&gt; &lt;?php p($l-&gt;t(&#39;Connect your Calendar&#39;));?&gt;
+&lt;/a&gt;
+&lt;a target=&quot;_blank&quot; class=&quot;button&quot; href=&quot;&lt;?php p(link_to_docs(&#39;user-sync-contacts&#39;)) ?&gt;&quot;&gt;
+       &lt;img class=&quot;appsmall appsmall-contacts svg&quot; src=&quot;&lt;?php print_unescaped(OCP\Util::imagePath(&#39;core&#39;, &#39;places/contacts-dark.svg&#39;)); ?&gt;&quot; /&gt; &lt;?php p($l-&gt;t(&#39;Connect your Contacts&#39;));?&gt;
+&lt;/a&gt;
+&lt;a target=&quot;_blank&quot; class=&quot;button&quot; href=&quot;&lt;?php p(link_to_docs(&#39;user-webdav&#39;)); ?&gt;&quot;&gt;
+       &lt;img class=&quot;appsmall svg&quot; src=&quot;&lt;?php print_unescaped(OCP\Util::imagePath(&#39;core&#39;, &#39;places/folder.svg&#39;)); ?&gt;&quot; /&gt; &lt;?php p($l-&gt;t(&#39;Access files via WebDAV&#39;));?&gt;
+&lt;/a&gt;
+&lt;?php else: ?&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;a target=&quot;_blank&quot; class=&quot;button&quot; href=&quot;&lt;?php p(link_to_docs(&#39;user-manual&#39;)); ?&gt;&quot;&gt;
+       &lt;img class=&quot;appsmall svg&quot; src=&quot;&lt;?php print_unescaped(OCP\Util::imagePath(&#39;settings&#39;, &#39;help.svg&#39;)); ?&gt;&quot; /&gt; &lt;?php p($l-&gt;t(&#39;Documentation&#39;));?&gt;
+&lt;/a&gt;
+&lt;a target=&quot;_blank&quot; class=&quot;button&quot; href=&quot;&lt;?php p(link_to_docs(&#39;user-webdav&#39;)); ?&gt;&quot;&gt;
+       &lt;img class=&quot;appsmall svg&quot; src=&quot;&lt;?php print_unescaped(OCP\Util::imagePath(&#39;core&#39;, &#39;places/folder.svg&#39;)); ?&gt;&quot; /&gt; &lt;?php p($l-&gt;t(&#39;Access files via WebDAV&#39;));?&gt;
+&lt;/a&gt;
+&lt;?php endif; ?&gt;
+
+&lt;p class=&quot;footnote&quot;&gt;
+&lt;?php if (OC_Util::getEditionString() === &#39;&#39;): ?&gt;
+&lt;?php print_unescaped($l-&gt;t(&#39;There’s more information in the &lt;a target=&quot;_blank&quot; href=&quot;%s&quot;&gt;documentation&lt;/a&gt; and on our &lt;a target=&quot;_blank&quot; href=&quot;http://owncloud.org&quot;&gt;website&lt;/a&gt;.&#39;, array(link_to_docs(&#39;user_manual&#39;)))); ?&gt;&lt;br&gt;
+&lt;?php print_unescaped($l-&gt;t(&#39;If you like ownCloud,
+       &lt;a href=&quot;mailto:?subject=ownCloud
+               &amp;body=ownCloud is a great open software to sync and share your files.
+               You can freely get it from http://owncloud.org&quot;&gt;
+               recommend it to your friends&lt;/a&gt;
+       and &lt;a href=&quot;http://owncloud.org/promote&quot;
+               target=&quot;_blank&quot;&gt;spread the word&lt;/a&gt;!&#39;)); ?&gt;
+&lt;?php else: ?&gt;
+© 2014 &lt;a href=&quot;https://owncloud.com&quot; target=&quot;_blank&quot;&gt;General Hospital.&lt;/a&gt;
+&lt;?php endif; ?&gt;
+&lt;/p&gt;
+
+&lt;/div&gt;
+</pre></div>
+</div>
+<p>The resulting welcome window looks like this:</p>
+<a class="reference internal image-reference" href="../_images/theming-10.png"><img alt="../_images/theming-10.png" src="../_images/theming-10.png" style="width: 6.5in; height: 3.8071in;" /></a>
+</div>
+</div>
+</div>
+
+
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="scaling_multiple_machines.html" title="Previous Chapter: Scaling Across Multiple Machines"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Scaling Acros...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="../issues/index.html" title="Next Chapter: Issues and Troubleshooting"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Issues and Tr... &raquo;</span>
+    </a>
+  </li>
+</ul>
+					</div>
+				</div>
+			</div>
+  </main>  
+  </div>
+</div>
+  </body>
+</html>

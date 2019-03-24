@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ownCloud Videos &mdash; ownCloud 8.0 Server Administration Manual 8.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/main.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="ownCloud 8.0 Server Administration Manual 8.0 documentation" href="../contents.html" />
+    <link rel="next" title="Enterprise Edition Installation" href="../enterprise_installation/index.html" />
+    <link rel="prev" title="Issues and Troubleshooting" href="../issues/index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1d2d44">
+
+  </head>
+  <body role="document">
+
+
+<div class="wrap container not-front">
+  <div class="content row">
+  <main class="main">
+    <div class="row page-content-header">
+      <div class="col-md-5 col-md-offset-7">
+      
+        <form class="headersearch" style="margin-bottom:-3px;" action="../search.html" method="get">
+        <input type="text" value="" name="q" id="q" class="form-control" /> 
+        <button  class="btn btn-default" type="submit" id="searchsubmit">Search</button>
+        </form>
+      
+      </div>
+    </div>
+    
+			<div class="row">
+				<div class="col-md-3">
+					<div class="sidebar">
+							<div class="menu-support-container">
+								<ul id="menu-support" class="menu">
+									<ul>
+										
+<li><a href="../contents.html">Table of Contents</a></li>
+									</ul>
+                  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">ownCloud 8.0 Server Administration Manual Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes.html">ownCloud 8.0 Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new_admin.html">What&#8217;s New for Admins in ownCloud 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration_user/index.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration_files/index.html">File Sharing and Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration_server/index.html">ownCloud Server Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration_database/index.html">Database Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintenance/index.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations/index.html">Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../issues/index.html">Issues and Troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">ownCloud Videos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#server-to-server-sharing-on-owncloud-7">Server to Server Sharing on ownCloud 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introducing-owncloud-7-enterprise-edition">Introducing ownCloud 7 Enterprise Edition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#owncloud-for-enterprise-file-sync-and-share">ownCloud for Enterprise File Sync and Share</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_installation/index.html">Enterprise Edition Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_clients/index.html">Creating Branded ownCloud Clients (Enterprise only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_server_branding/index.html">Enterprise Server Branding (Enterprise only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_external_storage/index.html">External Storage (Enterprise only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_user_management/index.html">User Management (Enterprise only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_files_drop/index.html">Enabling Anonymous Uploads with Files Drop (Enterprise Only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_logging/index.html">Enterprise Logging Apps (Enterprise only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_troubleshooting.html">Enterprise Troubleshooting</a></li>
+</ul>
+
+								</ul>
+							</div>
+					</div>
+				</div>
+        
+
+				<div class="col-md-9">
+					<div class="page-content">
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="../issues/index.html" title="Previous Chapter: Issues and Troubleshooting"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Issues and Tr...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="../enterprise_installation/index.html" title="Next Chapter: Enterprise Edition Installation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Enterprise Ed... &raquo;</span>
+    </a>
+  </li>
+</ul>
+						
+  <div class="section" id="owncloud-videos">
+<h1>ownCloud Videos<a class="headerlink" href="#owncloud-videos" title="Permalink to this headline">¶</a></h1>
+<p>Please visit our <a class="reference external" href="https://www.youtube.com/user/ownCloudofficial/">YouTube channel</a> for howtos, demos, news, and
+Webinars for both the Server and Enterprise versions of ownCloud.</p>
+<div class="section" id="server-to-server-sharing-on-owncloud-7">
+<h2>Server to Server Sharing on ownCloud 7<a class="headerlink" href="#server-to-server-sharing-on-owncloud-7" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=h09ppkkYDNk">Build a Cloud of ownCloud Servers with Server to Server Sharing</a></p>
+<div class="figure">
+<img alt="../_images/build-a-cloud-of-servers-320.png" src="../_images/build-a-cloud-of-servers-320.png" />
+</div>
+<p>Create your own cloud of ownCloud servers with server-to-server sharing.
+Link specific shares to other ownCloud servers and have two-way synchronization.</p>
+</div>
+<div class="section" id="introducing-owncloud-7-enterprise-edition">
+<h2>Introducing ownCloud 7 Enterprise Edition<a class="headerlink" href="#introducing-owncloud-7-enterprise-edition" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=SBn_8uVibLc">ownCloud 7 Enterprise Edition Enterprise File Sync and Share Software</a></p>
+<div class="figure">
+<a class="reference external image-reference" href="https://www.youtube.com/watch?v=SBn_8uVibLc"><img alt="../_images/oc-video-2.png" src="../_images/oc-video-2.png" /></a>
+</div>
+<p>ownCloud 7 Enterprise Edition introduces Universal File Access, which provides
+a single interface to all of your disparate systems and data silos. Integrate
+Sharepoint libraries, Windows network drives, link ownCloud servers with
+server-to-server sharing, and lots more.</p>
+</div>
+<div class="section" id="owncloud-for-enterprise-file-sync-and-share">
+<h2>ownCloud for Enterprise File Sync and Share<a class="headerlink" href="#owncloud-for-enterprise-file-sync-and-share" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=2HTQcf1zccU">ownCloud for Enterprise File Sync and Share</a></p>
+<div class="figure">
+<a class="reference external image-reference" href="https://www.youtube.com/watch?v=2HTQcf1zccU"><img alt="../_images/oc-video-1.png" src="../_images/oc-video-1.png" /></a>
+</div>
+<p>ownCloud is an enterprise-grade file sync and share solution that is hosted in your data
+center, on your servers, using your storage. ownCloud integrates seamlessly into your IT
+infrastructure; you can leave data where it lives and still deliver file sharing services
+that meet your data security and compliance policies.</p>
+</div>
+</div>
+
+
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="../issues/index.html" title="Previous Chapter: Issues and Troubleshooting"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Issues and Tr...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="../enterprise_installation/index.html" title="Next Chapter: Enterprise Edition Installation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Enterprise Ed... &raquo;</span>
+    </a>
+  </li>
+</ul>
+					</div>
+				</div>
+			</div>
+  </main>  
+  </div>
+</div>
+  </body>
+</html>

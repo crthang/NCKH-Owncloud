@@ -1,0 +1,26 @@
+{"reqId":"bdbb21377262c4a586cd7757d88ccd44","remoteAddr":"::1","app":"PHP","message":"touch(): Unable to create file D:\/xampp64\/htdocs\/owncloud\/owncloud\/data\/owncloud.log because No such file or directory at D:\\xampp64\\htdocs\\owncloud\\owncloud\\lib\\private\\log\\owncloud.php#48","level":3,"time":"2019-03-18T15:33:30+00:00"}
+{"reqId":"9421e38ffca8c6af9227b55c8394207e","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166049","level":4,"time":"2019-03-18T15:39:12+00:00"}
+{"reqId":"9421e38ffca8c6af9227b55c8394207e","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166050","level":4,"time":"2019-03-18T15:39:12+00:00"}
+{"reqId":"9421e38ffca8c6af9227b55c8394207e","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166051","level":4,"time":"2019-03-18T15:39:12+00:00"}
+{"reqId":"9421e38ffca8c6af9227b55c8394207e","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166054","level":4,"time":"2019-03-18T15:39:12+00:00"}
+{"reqId":"9421e38ffca8c6af9227b55c8394207e","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166055","level":4,"time":"2019-03-18T15:39:12+00:00"}
+{"reqId":"19631c4ba7ab0d43830caf372086aa8d","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166049","level":4,"time":"2019-03-18T15:39:27+00:00"}
+{"reqId":"19631c4ba7ab0d43830caf372086aa8d","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166050","level":4,"time":"2019-03-18T15:39:27+00:00"}
+{"reqId":"19631c4ba7ab0d43830caf372086aa8d","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166051","level":4,"time":"2019-03-18T15:39:27+00:00"}
+{"reqId":"19631c4ba7ab0d43830caf372086aa8d","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166054","level":4,"time":"2019-03-18T15:39:27+00:00"}
+{"reqId":"19631c4ba7ab0d43830caf372086aa8d","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166055","level":4,"time":"2019-03-18T15:39:28+00:00"}
+{"reqId":"36f666da8701e0c121037000b502f888","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166049","level":4,"time":"2019-03-18T15:39:29+00:00"}
+{"reqId":"36f666da8701e0c121037000b502f888","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166050","level":4,"time":"2019-03-18T15:39:29+00:00"}
+{"reqId":"36f666da8701e0c121037000b502f888","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166051","level":4,"time":"2019-03-18T15:39:29+00:00"}
+{"reqId":"36f666da8701e0c121037000b502f888","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166054","level":4,"time":"2019-03-18T15:39:29+00:00"}
+{"reqId":"36f666da8701e0c121037000b502f888","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166055","level":4,"time":"2019-03-18T15:39:29+00:00"}
+{"reqId":"8a2c0c11204e70939a4515930d57cd8e","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166049","level":4,"time":"2019-03-18T15:46:44+00:00"}
+{"reqId":"8a2c0c11204e70939a4515930d57cd8e","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166050","level":4,"time":"2019-03-18T15:46:44+00:00"}
+{"reqId":"8a2c0c11204e70939a4515930d57cd8e","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166051","level":4,"time":"2019-03-18T15:46:44+00:00"}
+{"reqId":"8a2c0c11204e70939a4515930d57cd8e","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166054","level":4,"time":"2019-03-18T15:46:44+00:00"}
+{"reqId":"8a2c0c11204e70939a4515930d57cd8e","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166055","level":4,"time":"2019-03-18T15:46:44+00:00"}
+{"reqId":"ec28533e490383288f053744e2e06511","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166049","level":4,"time":"2019-03-18T15:46:48+00:00"}
+{"reqId":"ec28533e490383288f053744e2e06511","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166050","level":4,"time":"2019-03-18T15:46:48+00:00"}
+{"reqId":"ec28533e490383288f053744e2e06511","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166051","level":4,"time":"2019-03-18T15:46:49+00:00"}
+{"reqId":"ec28533e490383288f053744e2e06511","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166054","level":4,"time":"2019-03-18T15:46:49+00:00"}
+{"reqId":"ec28533e490383288f053744e2e06511","remoteAddr":"::1","app":"core","message":"Unable to parse OCS content for app 166055","level":4,"time":"2019-03-18T15:46:49+00:00"}
